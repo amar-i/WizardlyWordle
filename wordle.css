@@ -1,0 +1,218 @@
+* {
+  font-family: "Harry Potter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#instructionScreen {
+  width: 500px;
+  height: 420px;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 1.25rem;
+}
+#instructionGreen {
+  color: #1a472a;
+}
+#instructionGold {
+  color: #ecb939;
+}
+#instructionDark {
+  color: #2c2c2c;
+}
+#instuctionHeading {
+  color: #b87333;
+}
+#openingScreen,
+#welcomeScreen,
+#gameOverScreen,
+#winnerScreen {
+  width: 500px;
+  height: 420px;
+  margin: 0 auto;
+  margin-top: 420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+}
+
+input {
+  background-color: #ecd9c1;
+  height: 35px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #740001;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #d00000;
+}
+
+body {
+  text-align: center;
+  background: url(./images/Background.jpeg) fixed center/cover;
+  color: #ecd9c1;
+  background-blend-mode: luminosity;
+}
+
+hr {
+  border: 2px solid #2c2c2c;
+  margin: 20px 0;
+}
+
+#title {
+  margin-top: 50px;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #8f4e4e;
+  text-shadow: 2px 2px 4px #70421a;
+  animation: glowTitle 3s ease-in-out infinite;
+}
+
+@keyframes glowTitle {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #b87333, 0 0 20px #70421a, 0 0 30px #b87333;
+  }
+  50% {
+    text-shadow: 0 0 5px #b87333, 0 0 10px #b87333, 0 0 15px #b87333;
+  }
+}
+
+#board {
+  width: 350px;
+  height: 420px;
+  margin: 0 auto;
+  margin-top: 3px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile {
+  border: 2px solid #70421a;
+  width: 60px;
+  height: 60px;
+  margin: 2.5px;
+  color: #613636;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: glowTile 3s ease-in-out infinite;
+}
+
+@keyframes glowTile {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #b87333, 0 0 20px #70421a, 0 0 30px #b87333;
+  }
+  50% {
+    text-shadow: 0 0 5px #b87333, 0 0 10px #b87333, 0 0 15px #b87333;
+  }
+}
+
+#answer {
+  font-size: 30px;
+  color: #8f4e4e;
+  text-shadow: 2px 2px 4px #70421a;
+  animation: glowTitle 3s ease-in-out infinite;
+}
+
+.correct {
+  background-color: #1a472a;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.present {
+  background-color: #ecb939;
+  color: #613636;
+  border-color: #613636;
+}
+
+.absent {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.keyboard-row {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.key-tile,
+.enter-key-tile {
+  border: 2px solid #70421a;
+  width: 38px;
+  height: 60px;
+  margin: 1px;
+  color: #613636;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: glowTile 3s ease-in-out infinite;
+}
+
+.enter-key-tile {
+  width: 76px;
+}
+
+#showInstructionsBtn {
+  background-color: transparent;
+  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  animation: glowButton 2s infinite alternate;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+@keyframes glowButton {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5);
+  }
+}
+
+#showInstructionsBtn:hover {
+  background-color: #740001;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}

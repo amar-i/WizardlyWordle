@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="wordle.css" />
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet" />
+    <title>Wizardly Wordle</title>
+  </head>
+  <body>
+    <div id="openingScreen">
+      <h1 id="title" class="screen-title">Enter your name Wizard</h1>
+      <input type="text" id="name" required />
+      <button id="submitName" onclick="welcomeScreen()">Submit</button>
+    </div>
+    <div id="welcomeScreen" style="display: none">
+      <h1 id="title"screen-title">Welcome <span id="displayName"></span></h1>
+      <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="gameBoard" style="display: none">
+      <h1 id="title">Wizardly Wordle</h1>
+      <button id="showInstructionsBtn" onclick="showInstructions()">?</button>
+      <hr />
+      <br />
+      <div id="board"></div>
+      <br />
+    </div>
+    <div id="winnerScreen" style="display: none">
+      <h1 id="title">Congratulations Wizard!</h1>
+      <button onclick="playAgain()">Play Again</button>
+    </div>
+    <div id="gameOverScreen" style="display: none">
+      <h2>The magic word was</h2>
+      <h1 id="answer"></h1>
+      <button onclick="playAgain()">Play Again</button>
+    </div>
+    <div id="instructionScreen" style="display: none;">
+    <h2 id="title">Wizardly Wordle Instructions</h2>
+      <p>Your mission is to uncover the hidden word from the world of Harry Potter in six attempts.</p>
+      <ol>
+        <li>Type your guesses and cast your spell by clicking "Enter"</li>
+        <li>Colors reveal the magic:
+          <ul>
+            <li id="instructionGreen"><strong>Green:</strong> Correct and in the right position.</li>
+            <li id="instructionGold"><strong>Gold:</strong> Correct but in the wrong position.</li>
+            <li id="instructionDark"><strong>Dark:</strong> Incorrect.</li>
+          </ul>
+        </li>
+        <li>Decipher the magical word using the clues.</li>
+      </ol>
+      <h4 id="instuctionHeading">Warnings:</h4>
+      <ul>
+        <li>Stay vigilant, the dark arts may confuse you.</li>
+        <li>Incorrect guesses cast shadows, choose wisely.</li>
+        <li>The true word is a secret known only to the magical realm.</li>
+      </ul>
+      <h4 id="instuctionHeading">Triumph:</h4>
+      <p>Succeed in unveiling the hidden word to become the Wordle Wizard!</p><p>Successfully unveil the hidden word within six attempts, and you shall be hailed as the Wordle Wizard! Your name will echo through the enchanted halls of Hogwarts.</p>
+      <button onclick="continueGame()">Continue</button>
+    </div>
+    <script src="wordle.js"></script>
+  </body>
+</html>
